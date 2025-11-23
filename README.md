@@ -24,7 +24,5 @@ This repository demonstrates the **implementation, replication, and enhancement*
 - 🧠 **ML-based Proactive Scheduler**
   - Uses GRU networks to anticipate cost violations.
 
----
 
-## 📁 Repository Structure
 
