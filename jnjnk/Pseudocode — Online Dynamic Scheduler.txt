@@ -1,6 +1,0 @@
-Algorithm: Online Dynamic Scheduler
-Inputs: LQR Cost J(j), bounds (J_lb, J_ub), precomputed library M(j)
-
-1. If J(j) >= J_ub: increase utilization → select higher-frequency ACESS
-2. If J(j) <= J_lb: decrease utilization → select lower-frequency ACESS
-3. Update global utilization and reschedule all tasks
