@@ -1,15 +1,14 @@
-from scipy.linalg import expm
 import numpy as np
 
-class SystemModel:
-    def __init__(self, Phi, Gamma, h):
-        self.Phi = np.array(Phi)
-        self.Gamma = np.array(Gamma)
-        self.h = h
-        self.A = None
-        self.B = None
+class LTISystem:
+    def __init__(self, Phi, Gamma, C, Q, R, gamma, safe_region):
+        self.Phi = Phi
+        self.Gamma = Gamma
+        self.C = C
+        self.Q = Q
+        self.R = R
+        self.gamma = gamma
+        self.safe_region = safe_region
 
-    def discretize(self):
-        self.A = expm(self.Phi * self.h)
-        self.B = np.dot(np.linalg.inv(self.Phi), (self.A - np.eye(self.Phi.shape[0]))) @ self.Gamma
-        return self.A, self.B
+    def set_periods(self, periods):
+        self.periods = periods
