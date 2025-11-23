@@ -7,22 +7,35 @@ This repository demonstrates the **implementation, replication, and enhancement*
 
 ---
 
-## 🧠 Features
+## 🧩 Features
 
-- ⚙️ **LTI System Modeling**
-  - Implements continuous-to-discrete conversion for system dynamics.
-- 📊 **LMI-based Stability Analysis**
-  - Uses convex optimization to verify Lyapunov stability via LMIs.
-- 🔄 **Control Skipping Automaton (CSA)**
-  - Encodes safe transitions between control modes.
-- 🧩 **ACESS Library Generator**
-  - Generates valid scheduling sequences (in `c4b82162-e4b8-4aa3-b9e7-ad6d10368a74.py`).
-- 🕹️ **Online Dynamic Scheduler**
-  - Feedback-driven algorithm that adapts task utilization in real-time.
-- 🔋 **Energy-Aware Co-Design**
-  - Optimizes for both performance and energy consumption.
-- 🧠 **ML-based Proactive Scheduler**
-  - Uses GRU networks to anticipate cost violations.
+- ⚙️ **System Modeling (system_model.py)**  
+  Models continuous-time LTI systems and performs discretization.
 
+- 🧠 **Subsystem Generator (subsystem_generator.py)**  
+  Generates subsystem matrices for different sampling periods and skip counts.
+
+- 📊 **Stability Analysis (stability_analyzer.py)**  
+  Verifies stability using Linear Matrix Inequalities (LMIs) and Lyapunov analysis.
+
+- 🔄 **Control Skipping Automaton (csa_synthesizer.py)**  
+  Constructs the automaton encoding valid transitions between control modes.
+
+- 🔁 **ACESS Sequence Generator (acess_generator.py)**  
+  Generates valid control execution skipping sequences from the CSA.
+
+- 🕹️ **Online Scheduler (online_scheduler.py)**  
+  Dynamically adjusts task utilization using real-time performance feedback.
+
+- 🔋 **Energy Model (energy_model.py)**  
+  Adds multi-objective optimization between energy and performance.
+
+- 🧩 **GRU-Based Cost Predictor (GRU-Based Cost Predictor.py / predictor.py)**  
+  Predicts future control costs for proactive scheduling using recurrent neural networks.
+
+- 🧾 **Pseudocode — Online Dynamic Scheduler.txt**  
+  Provides high-level algorithmic reference for understanding the scheduling logic.
+
+---
 
 
